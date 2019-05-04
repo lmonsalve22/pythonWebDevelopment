@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Inicio
+{% endblock titulo %}
+
+{% block content %}
+
+{% comment "Comentario multilínea" %}
+    Holi
+{% endcomment %}
+
+{#Comentario una linea#}
+
+{% if user.username %}
+<h1>Bienvenido {{ user.username }}</h1>    
+{% else %}
+    <h1>No has iniciado sesión</h1>
+{% endif %}
+
+
+{% endblock content %}

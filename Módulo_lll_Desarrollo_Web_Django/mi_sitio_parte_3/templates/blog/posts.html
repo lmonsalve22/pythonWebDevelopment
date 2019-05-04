@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block titulo %}
+    Ver posts
+{% endblock titulo %}
+
+{% block content %}
+<div class="container">
+    <h1>Tus posts son: </h1>
+	<ul>
+	{%for publication in publicaciones  %}
+		<li>Título: {{publication.titulo}}</li>
+		<p>Descripción: {{publication.descripcion}}</p>
+		<p>Autor: {{publication.autor}}</p>
+		<p>Fecha: {{publication.fecha}}</p>
+	{% endfor %}	
+	</ul>
+</div>
+{% endblock content %}
