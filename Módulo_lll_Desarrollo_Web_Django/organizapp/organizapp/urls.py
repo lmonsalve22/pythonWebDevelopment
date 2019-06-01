@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+#Para poder abrir archivos estáticos en el admin
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('apps.tareas.urls')),
 ]
+#Colocar en el settings
+#MEDIA_ROOT = (os.path.join(BASE_DIR,'media'))
+#MEDIA_URL = '/media/'
+
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
