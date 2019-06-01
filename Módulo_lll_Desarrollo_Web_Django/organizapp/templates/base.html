@@ -26,7 +26,7 @@
 					<a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Mis tareas</a>
+					<a class="nav-link" href="{% url 'listar_tarea' %}">Mis tareas</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,11 +38,8 @@
 				</li>
 				
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Usuario" aria-label="Usuario">
-				<input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Usuario">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ingresar</button>
-			</form>
+
+				<a href="{% url 'mi_login' %}" class="btn btn-outline-success my-2 my-sm-0" >Iniciar sesión</a>
 		</div>
 	</nav>
 	<!--Fin del navbar--->

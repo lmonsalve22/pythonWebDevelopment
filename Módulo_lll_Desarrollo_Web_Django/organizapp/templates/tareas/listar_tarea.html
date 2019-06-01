@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Lista de tareas
+{% endblock titulo %}
+
+{% block content %}
+    
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Imágen</th>
+    </tr>
+  </thead>
+  <tbody>
+ {%for tarea in tareas %}
+    <tr>
+      <th scope="row">{{tarea.id}}</th>
+      <td>{{tarea.nombreHomework}}</td>
+      <td>{{tarea.descripcion}}</td>
+
+      <td><img src="../media/{{tarea.foto}}" alt="Imágen de la tarea" width="70" height="70"></td>
+    </tr>
+	{% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
